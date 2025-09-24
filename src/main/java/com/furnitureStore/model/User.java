@@ -4,6 +4,10 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+/**
+ * Represents a user of the Furniture Store application.
+ * Contains registration and login information.
+ */
 
 public class User {
 	@NotBlank (message="First name is required")
@@ -34,7 +38,15 @@ public class User {
 	public User() {
 		
 	}
-
+	 /**
+     * Constructor for creating a new User.
+     *
+     * @param firstName user's first name
+     * @param lastName user's last name
+     * @param email user's email
+     * @param username username for login
+     * @param password password for login
+     */
 	public User(String firstName, String lastName,String email, String username, String password) {
 			
 		super();
@@ -44,43 +56,90 @@ public class User {
 		this.username = username;
 		this.password = password;
 	}
-
+	
+	/**
+	 * Gets the user's first name.
+	 * 
+	 * @return the first name of the user
+	 */
 	public String getFirstName() {
 		return firstName;
 	}
 
+	/**
+	 * Sets the user's first name.
+	 * 
+	 * @param firstName the first name to set
+	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
+	
+	
+	/**
+	 * Gets the user's last name.
+	 * 
+	 * @return the last name of the user
+	 */
 	public String getLastName() {
 		return lastName;
 	}
-
+	
+	/**
+	 * Sets the user's last name.
+	 * 
+	 * @param lastName the last name to set
+	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
+	
+	/**
+	 * Gets the user's email address.
+	 * 
+	 * @return the email of the user
+	 */
 	public String getEmail() {
 		return email;
 	}
-
+	
+	/**
+	 * Sets the user's email address.
+	 * 
+	 * @param email the email to set
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	/**
+	 * Gets the username used for login.
+	 * 
+	 * @return the username of the user
+	 */
 	public String getUsername() {
 		return username;
 	}
-
+	/**
+	 * Sets the username used for login.
+	 * 
+	 * @param username the username to set
+	 */
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
+	/**
+	 * Gets the user's password.
+	 * 
+	 * @return the password of the user
+	 */
 	public String getPassword() {
 		return password;
 	}
-
+	/**
+	 * Sets the user's password.
+	 * 
+	 * @param password the password to set
+	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
