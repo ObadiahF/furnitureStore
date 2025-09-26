@@ -51,15 +51,12 @@ public class RegistrationController {
 	 */
 	@PostMapping("/register")
 	public String proccessRegistration(@Valid @ModelAttribute("user") User user,BindingResult bindingResult, Model model) {
-		
+
 		if(bindingResult.hasErrors()) 
 		{
 			return "register";	
 		}
-		
-		// add user to data base
-		
-		
+		// add user to database
 		model.addAttribute("successMessage","Registration Succesfull");
 		return "registration-success";
 	
