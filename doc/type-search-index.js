@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.furnitureStore","l":"FurnitureStoreApplication"},{"p":"com.furnitureStore.Controller","l":"helloController"},{"p":"com.furnitureStore.Controller","l":"RegistrationController"},{"p":"com.furnitureStore.model","l":"User"}];updateSearchResults();
