@@ -14,29 +14,42 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-sm" style="width: 25rem;">
             <div class="card-body">
+                <!-- Title of the login page -->
                 <h3 class="card-title text-center mb-4">Login</h3>
+
+                <!-- Login Form -->
                 <form action="/login" method="post">
+                    <!-- Username input field -->
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username" required placeholder="Enter your username">
                     </div>
+
+                    <!-- Password input field -->
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password">
                     </div>
+
+                    <!-- Display error message if authentication fails -->
                     <div th:if="${error}" class="alert alert-danger" role="alert">
                         <p th:text="${error}">Invalid username or password!</p>
                     </div>
+
+                    <!-- Login button -->
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
+
+                <!-- Link to register for new users -->
                 <div class="text-center mt-3">
                     <p>Don't have an account? <a href="/register">Sign up</a></p>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
 
 <div th:replace="layouts/common :: footer"></div>
